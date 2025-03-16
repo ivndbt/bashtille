@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Generated with bashtille -->
+<head>
+  <!--HTML meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <meta name="title" content="$PAGE_TITLE">
+  <meta name="description" content="$PAGE_DESCRIPTION">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="$PAGE_URL">
+  <!--Facebook meta tags (opengraph)-->
+  <meta property="og:title" content="$PAGE_TITLE">
+  <meta property="og:description" content="$PAGE_DESCRIPTION">
+  <meta property="og:image" content="$ROOT_URLassets/favicon/favicon.png">
+  <meta property="og:type" content="$PAGE_TYPE">
+  <meta property="og:url" content="$PAGE_URL">
+  <meta property="og:site_name" content="yoursitename">
+  <!--Twitter meta tags-->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@websitetwitterusername"> <!--twitter username of the website-->
+  <meta name="twitter:creator" content="@yourtwitterusername"> <!--twitter username of the content creator-->
+  <!--Microdata-->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "$PAGE_TYPE",
+      "name": "$PAGE_TITLE",
+      "description": "$PAGE_DESCRIPTION",
+      "url": "$PAGE_URL",
+      "image": "$ROOT_URLassets/favicon/favicon.png"
+    }
+  </script>
+  <!--RSS feed-->
+  <link rel="alternate" type="application/rss+xml" title="yourdomain RSS feed" href="$ROOT_URLrss.xml">
+  <!--Stylesheet-->
+  <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/style.css?v=1.0">
+  <!--Favicon-->
+  <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20version='1.1'%20viewBox='0%200%2032%2032'%20xmlns='http://www.w3.org/2000/svg'%20shape-rendering='crispEdges'%3E%3Crect%20width='32'%20height='32'%20fill='%23ffffff'%20/%3E%3C/svg%3E">
+  <link rel="icon" sizes="32x32" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/manifest.webmanifest">
+  <!--Tab title-->
+  <title>$PAGE_TITLE</title>
+</head>
+
+<body>
+
+  <header>
+    <a class="brand" href="/"><h1>yourdomain</h1></a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/posts.html">Posts</a>
+      <a href="/about.html">About</a>
+      <a href="/now.html">Now</a>
+    </nav>
+  </header>
+
+  $PAGE_MAIN
+
+  <footer>
+    <span data-nosnippet>
+      <small>yourdomain</small>
+    </span>
+  </footer>
+
+</body>
+</html>

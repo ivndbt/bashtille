@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" 
+     xmlns:atom="http://www.w3.org/2005/Atom" 
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+<!-- Generated with bashtille -->
+
+<channel>
+  <title>blogtitle</title>
+  <link>https://yourdomain.com/</link>
+  <description>Description of your blog.</description>
+  <language>en</language>
+  <category>Blogging</category> 
+  <copyright>Type of copyright.</copyright>
+  <atom:link href="https://yourdomain.com/rss.xml" rel="self" type="application/rss+xml"/>
+  <image>
+    <title>blogtitle</title>
+    <url>https://yourdomain.com/assets/favicon/apple-touch-icon.png</url>
+    <link>https://yourdomain.com/</link>
+  </image>
+  <docs>https://www.rssboard.org/rss-specification</docs>
+
+!!!post1.env
+  <item>
+    <title>$PAGE_TITLE</title>
+    <link>$PAGE_URL</link>
+    <guid>$PAGE_URL</guid>
+    <description>$PAGE_DESCRIPTION</description>
+    <pubDate>$LAST_MOD</pubDate>
+    <enclosure url="$PAGE_THUMBNAIL" type="image/webp"/>
+    <content:encoded><![CDATA[
+    $PAGE_MAIN
+    ]]></content:encoded>
+  </item>
+
+!!!post2.env
+  <item>
+    <title>$PAGE_TITLE</title>
+    <link>$PAGE_URL</link>
+    <guid>$PAGE_URL</guid>
+    <description>$PAGE_DESCRIPTION</description>
+    <pubDate>$LAST_MOD</pubDate>
+    <enclosure url="$PAGE_THUMBNAIL" type="image/webp"/>
+    <content:encoded><![CDATA[
+    $PAGE_MAIN
+    ]]></content:encoded>
+  </item>
+
+</channel>
+</rss>
