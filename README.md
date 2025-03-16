@@ -22,9 +22,11 @@ With `bashtille` you can:
 Go to your website root directory and run:
 
 ```bash
-curl -LO https://github.com/nomeutente/nome-repository/archive/refs/heads/master.zip
+curl -LO https://github.com/ivndbt/bashtille/archive/refs/heads/master.zip
 unzip master.zip
-rm master.zip
+cp -r bashtille-master/src/ src/
+rm -rf master.zip bashtille-master/
+chmod +x /src/bashtille.sh /src/html-compiler.sh /src/sitemap-compiler.sh /src/rss-compiler.sh
 ```
 
 ## Usage
@@ -59,9 +61,9 @@ git checkout writing  # Ensure being on the writing branch
 # Add new-post.env and optionally include it in the RSS template
 
 # Generate all the files
-./bashtille html new-post.env
-./bashtille sitemap
-./bashtille rss
+./src/bashtille html new-post.env
+./src/bashtille sitemap
+./src/bashtille rss
 
 git add .
 git commit -m "Added new post"
