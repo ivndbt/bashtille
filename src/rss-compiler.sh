@@ -49,12 +49,15 @@ parse_env_file() {
                 VAR_VALUE="${BASH_REMATCH[1]}"
             fi
 
+            VAR_VALUE="$(echo "$VAR_VALUE" | sed 's/&/\\&/g')"  # Escape the "&" character
             VARS["$VAR_NAME"]="$VAR_VALUE"
         elif [[ $IS_MULTILINE -eq 1 ]]; then
             VARS["$VAR_NAME"]+=$'\n'"$line"
 
             if [[ $line =~ (.*)\'$ ]]; then
                 VARS["$VAR_NAME"]="${VARS[$VAR_NAME]::-1}"
+                VAR_VALUE="$(echo "${VARS[$VAR_NAME]}" | sed 's/&/\\&/g')"  # Escape the "&" character in multiline
+                VARS["$VAR_NAME"]="$VAR_VALUE"  # Needed to escape the "&" character in multiline
                 IS_MULTILINE=0
             fi
         fi
