@@ -17,6 +17,8 @@ With `bashtille` you can:
 - Generate a sitemap structure
 - Generate (and control) an RSS feed
 
+>Read the origin story on [ivndbt.com](https://ivndbt.com/makes/bashtille/bashtille).
+
 ## Installation
 
 Go to your website root directory and run:
