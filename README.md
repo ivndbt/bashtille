@@ -24,10 +24,10 @@ With `bashtille` you can:
 Go to your website root directory and run:
 
 ```bash
-curl -LO https://github.com/ivndbt/bashtille/archive/refs/heads/master.zip
-unzip master.zip
-cp -r bashtille-master/src/ src/
-rm -rf master.zip bashtille-master/
+curl -LO https://github.com/ivndbt/bashtille/archive/refs/heads/main.zip
+unzip main.zip
+cp -r bashtille-main/src/ src/
+rm -rf main.zip bashtille-main/
 chmod +x /src/bashtille.sh /src/html-compiler.sh /src/sitemap-compiler.sh /src/rss-compiler.sh
 ```
 
@@ -53,13 +53,13 @@ See the [README](/src/README.md) inside the `/src` directory for full documentat
 To keep your creative process organized, consider using two branches:
 
 - **`writing` branch** — where you write, generate, and edit content.
-- **`master` branch** — where the final, published content is stored (synced with your hosting platform).
+- **`main` branch** — where the final, published content is stored (synced with your hosting platform).
 
 #### Example Workflow
 
 ```bash
 cd ~/website-root-dir
-git checkout writing  # Ensure being on the writing branch
+git switch writing  # Ensure being on the writing branch
 # Add new-post.env and optionally include it in the RSS template
 
 # Generate all the files
@@ -70,7 +70,7 @@ git checkout writing  # Ensure being on the writing branch
 git add .
 git commit -m "Added new post"
 
-git checkout master
+git switch main
 git merge writing
 # If this isn't the first merge, remove `/src` from the staging area and locally
 # If this is the first merge remove it only locally
@@ -79,7 +79,7 @@ rm -rf src  # Remove `/src` locally
 git commit -m "Added new post"
 
 # Publish the new-post online
-git push origin master
+git push origin main
 ```
 
 This separation ensures your published branch stays clean, containing only the necessary static files.
